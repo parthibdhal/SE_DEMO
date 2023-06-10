@@ -1,3 +1,5 @@
+//arka fucker gomlumon
+
 import java.util.Scanner;
 class Room
 {
