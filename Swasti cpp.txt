@@ -1,0 +1,24 @@
+#include <iostream>
+#include <string>
+
+int main() {
+    std::string name = "Swastideb";
+    std::string sentence;
+
+    std::cout << "Enter a sentence: ";
+    std::getline(std::cin, sentence);
+
+    // Convert the sentence and name to lowercase for case-insensitive comparison
+    std::string lowercaseSentence(sentence);
+    std::string lowercaseName(name);
+    std::transform(lowercaseSentence.begin(), lowercaseSentence.end(), lowercaseSentence.begin(), ::tolower);
+    std::transform(lowercaseName.begin(), lowercaseName.end(), lowercaseName.begin(), ::tolower);
+
+    if (lowercaseSentence.find(lowercaseName) != std::string::npos) {
+        std::cout << "Your name was mentioned!" << std::endl;
+    } else {
+        std::cout << "Your name was not mentioned." << std::endl;
+    }
+
+    return 0;
+}
